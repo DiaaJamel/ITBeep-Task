@@ -35,7 +35,7 @@ class ServicesController extends Controller
         $body="hello $to_name you booked this sevice\services $services and you are $interest";
         Mail::send([],[],function($msg) use($to_name,$to_email,$body){
             $msg->to($to_email,$to_name)->subject("itbeep task");
-            $msg->from("orangebackup20@gmail.com","itbeep");
+            $msg->from("diaa.jamiloca@gmail.com","itbeep");
             $msg->setBody($body);
         });
         return $request->all();
